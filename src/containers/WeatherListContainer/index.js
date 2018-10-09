@@ -13,8 +13,10 @@ export default class WeatherListContainer extends React.Component {
     }
 
     componentDidMount() {
-        this.setState({
-            items: getWeather()
+        getWeather().then((response) => {
+            this.setState({
+                items: response
+            })
         })
     }
 
