@@ -8,7 +8,7 @@ const WeatherList = (props) => {
         <ul className='weather-list'>  
             {
                 props.items.map((item) =>
-                    <WeatherListItem key={item.day} {...item} />
+                    <WeatherListItem key={item.day} {...item} onClick={console.log} />
                 )
             }
         </ul>

@@ -5,13 +5,13 @@
     padding: 8px 10px;
 
     &:first-child {
-        border-top-right-radius: 2px;
-        border-top-left-radius: 2px;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
     }
 
     &:last-child {
-        border-bottom-right-radius: 2px;
-        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
     }
 
     &__name {
@@ -25,7 +25,7 @@
         }
         &__day {
             font-size: 12px;
-            color: #666666
+            color: #666666;
         }
     }
 
@@ -40,14 +40,15 @@
         }
 
         &__max::after {
-            content: '°'
+            content: '°';
         }
     }
 
     &__icon {
         flex: 1;
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
+        user-select: none;
 
         &__image {
             max-width: 50px;

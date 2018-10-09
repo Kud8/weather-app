@@ -1,12 +1,17 @@
 import React from 'react';
-import WeatherList from '../../components/WeatherList'
-import { getWeather } from '../../services/weatherService'
+import WeatherList from '../../components/WeatherList';
+import { getWeather } from '../../services/weatherService';
+import FontAwesome from 'react-fontawesome';
+import './index.scss';
 
-export default class WeatherListContainer extends Component {
-    state = {
-        items: []
+export default class WeatherListContainer extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: [],
+        };
     }
-    
+
     componentDidMount() {
         this.setState({
             items: getWeather()
@@ -15,15 +20,13 @@ export default class WeatherListContainer extends Component {
 
     render() {
         const { items } = this.state;
-        return items === [] ? (
-            <div className="loading">
-              <FontAwesome icon="spinner" spin />
-            </div>
-          ) : (
-            <WeatherList items={items} />
-          )
-         
+        return items.length
+            ? <WeatherList items={items} />
+            : (
+                <div className="loading">
+                    <FontAwesome name="spinner" spin />
+                </div>
+            )
     }
 }
   
-export default WeatherListContainer;

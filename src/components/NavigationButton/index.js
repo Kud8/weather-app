@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import './index.scss';
 
 const NavigationButton = (props) => {
-    const {text, disabled} = props;
+    const {text, disabled, onClick} = props;
+    const handleClick = () => onClick(text);
 
     return (
-        <button className="navigation-button" disabled={disabled} onClick={() => props.onClick(text)}>
+        <button className="navigation-button" disabled={disabled} onClick={handleClick}>
             {text}
         </button>
     )
