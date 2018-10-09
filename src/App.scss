@@ -1,0 +1,39 @@
+.App {
+  width: 25%;
+}
+
+@media screen and (max-width: 1125px) {
+  .App {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 922px) {
+  .App {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .App {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .App {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 526px) {
+  .App {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .App {
+    width: 100%;
+  }
+}

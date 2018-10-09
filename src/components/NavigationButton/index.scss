@@ -1,0 +1,16 @@
+.navigation-button {
+    border-radius: 15px;
+    padding: 5px 15px;
+    font-size: 16px;
+    line-height: 16px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+
+    &[disabled] {
+        background-color: #949EA0;
+        color: #ffffff;
+        cursor: default;
+        pointer-events: none;
+    }
+}
